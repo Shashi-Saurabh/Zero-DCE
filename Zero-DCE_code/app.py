@@ -3,7 +3,7 @@ import gradio as gr
 import torch
 import numpy as np
 from PIL import Image
-from model import ZeroDCE
+from model import enhance_net_nopool as ZeroDCE
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = ZeroDCE().to(device)
